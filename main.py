@@ -100,18 +100,22 @@ def run():
                 status[0] = "Opened"
                 message = "Bathroom 1 open"
                 bathrooms[0].open()
+                bathrooms[0].log()
             elif data[0] == node_00_close:
                 status[0] = "Closed"
                 message = "Bathroom 1 occupado"
                 bathrooms[0].close()
+                bathrooms[0].log()
             elif data[0] == node_01_open:
                 status[1] = "Opened"
                 message = "Bathroom 2 open"
                 bathrooms[1].open()
+                bathrooms[1].log()
             elif data[0] == node_01_close:
                 status[1] = "Closed"
                 message = "Bathroom 2 occupado"
                 bathrooms[1].close()
+                bathrooms[1].log()
 
             if status[0] != status_old[0]:
                 changetime = dt.datetime.now()
